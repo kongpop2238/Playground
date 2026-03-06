@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Privacy Protection Platform Mockup</title>
+<style>
+:root{--p:#4f46e5;--s:#6366f1;--bg:#f4f7ff;--line:#d7e2f3;--text:#0f172a;--muted:#5b6d86}
+*{box-sizing:border-box}body{margin:0;font:14px/1.4 "Segoe UI",sans-serif;color:var(--text);background:linear-gradient(180deg,#edf2ff,var(--bg))}
+.app{display:grid;grid-template-columns:260px 1fr;gap:14px;max-width:1280px;padding:16px;margin:auto;min-height:100vh}
+.side,.main{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 24px #1e293b14}
+.side{padding:14px;display:flex;flex-direction:column;gap:10px}.brand{font-weight:700;padding-bottom:8px;border-bottom:1px solid #e5edf9}
+.nav{display:flex;flex-direction:column;gap:7px}.nav button{border:1px solid #dbe5f6;background:#f8faff;color:#334155;padding:9px;border-radius:10px;text-align:left;font-weight:600;cursor:pointer}
+.nav button.active{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;border-color:transparent}
+.main{padding:14px;display:flex;flex-direction:column;gap:10px}.top{display:flex;justify-content:space-between;align-items:center}
+.top h2{margin:0;font-size:20px}.top p{margin:2px 0 0;color:var(--muted)}.pill{font-size:11px;font-weight:700;border:1px solid #a7f3d0;background:#ecfdf5;color:#065f46;padding:5px 9px;border-radius:999px}
+.screen{display:none}.screen.active{display:block}.card{background:#fff;border:1px solid #e5ecf9;border-radius:12px;padding:12px;margin-bottom:10px}
+.grid{display:grid;gap:10px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+label{font-size:11px;font-weight:700;color:#334155;display:block;margin:0 0 5px;text-transform:uppercase}input,select,textarea{width:100%;padding:9px;border:1px solid #c9d7ee;border-radius:9px;font:inherit}
+textarea{min-height:80px}.btns{display:flex;flex-wrap:wrap;gap:8px}.btn{border:1px solid #d4dff2;background:#fff;padding:8px 11px;border-radius:9px;font-weight:600;cursor:pointer}
+.btn.p{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;border-color:transparent}.btn.w{background:#fffbeb;border-color:#fde68a}.btn.d{background:#fef2f2;border-color:#fecaca}.btn.g{background:#ecfdf5;border-color:#a7f3d0}
+.tbl{overflow:auto;border:1px solid #dbe6f7;border-radius:10px}table{width:100%;min-width:520px;border-collapse:collapse}th,td{padding:8px 10px;border-bottom:1px solid #edf2fb;text-align:left}th{font-size:11px;text-transform:uppercase;color:#475569;background:#f8fbff}
+.tag{font-size:11px;font-weight:700;padding:3px 7px;border-radius:999px;border:1px solid}.low{background:#ecfdf5;border-color:#a7f3d0}.med{background:#fff7ed;border-color:#fdba74}.high{background:#fef2f2;border-color:#fecaca}
+.box{border:2px dashed #c7d6ee;border-radius:12px;min-height:170px;display:grid;place-items:center;color:#486387;background:#f7faff;text-align:center}
+.risk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.risk button{border:1px solid #d3def1;background:#fff;border-radius:10px;padding:9px;text-align:left;cursor:pointer}.risk .sel{outline:2px solid #4f46e544}
+.future{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.future div{border:1px solid #d6e6fb;border-radius:10px;padding:10px;background:#f8fbff;font-weight:600}
+.metric{font-size:25px;font-weight:700}.muted{color:var(--muted)}.toast{position:fixed;right:16px;bottom:16px;background:#0f172a;color:#fff;padding:8px 11px;border-radius:9px;opacity:0;transform:translateY(8px);transition:.2s}
+.toast.show{opacity:1;transform:none}
+@media(max-width:980px){.app{grid-template-columns:1fr}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.g2,.g4,.risk,.future{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">Privacy Shield AI<br><span class="muted">B2B UI Mockup</span></div>
+    <nav class="nav">
+      <button class="active" data-t="login">1 Login</button>
+      <button data-t="org">2 Organization Setup</button>
+      <button data-t="dash">3 Dashboard</button>
+      <button data-t="create">4 Create Project</button>
+      <button data-t="detect">5 AI Detection</button>
+      <button data-t="adjust">6 Manual Adjustment</button>
+      <button data-t="risk">7 Risk Classification</button>
+      <button data-t="review">8 Reviewer Panel</button>
+      <button data-t="audit">9 Export & Audit</button>
+      <button data-t="nav">10 Navigation Structure</button>
+    </nav>
+    <div class="muted">Prototype only. Actions show mock feedback.</div>
+  </aside>
+  <main class="main">
+    <div class="top"><div><h2 id="title">Login Page</h2><p id="subtitle">Admin / User authentication with future SSO.</p></div><span class="pill">Draft</span></div>
+
+    <section id="s-login" class="screen active">
+      <div class="card" style="max-width:520px;margin:auto">
+        <h3>AI Privacy Protection System</h3>
+        <div class="grid">
+          <div><label>Email / Username</label><input placeholder="name@company.com"></div>
+          <div><label>Password</label><input type="password" placeholder="Password"></div>
+          <div class="btns"><button class="btn p action" data-msg="Logged in (mock)">Login</button><button class="btn action" data-msg="Forgot password flow (mock)">Forgot password?</button></div>
+          <div class="muted">SSO roadmap: Google and Microsoft</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s-org" class="screen">
+      <div class="grid g2">
+        <div class="card"><h3>Organization Setup</h3><div><label>Organization Name</label><input value="Acme Global"></div><div><label>Industry</label><select><option>Technology</option><option>Healthcare</option></select></div><div><label>Data Policy Mode</label><select><option>Standard</option><option>Strict</option></select></div><div class="btns" style="margin-top:8px"><button class="btn action" data-msg="User invited (mock)">Add User</button><button class="btn p action" data-msg="Organization saved">Save & Continue</button></div></div>
+        <div class="card"><h3>User Management</h3><div class="tbl"><table><thead><tr><th>Name</th><th>Role</th><th>Permission</th></tr></thead><tbody><tr><td>John</td><td>Admin</td><td>Full Access</td></tr><tr><td>Alice</td><td>Reviewer</td><td>Medium Risk Review</td></tr><tr><td>Nina</td><td>Member</td><td>Create Project</td></tr></tbody></table></div></div>
+      </div>
+    </section>
+
+    <section id="s-dash" class="screen">
+      <div class="grid g4">
+        <div class="card"><div class="metric">14</div><div class="muted">Total Projects</div></div>
+        <div class="card"><div class="metric">3</div><div class="muted">Pending Review</div></div>
+        <div class="card"><div class="metric">9</div><div class="muted">Approved</div></div>
+        <div class="card"><div class="metric">2</div><div class="muted">Rejected</div></div>
+      </div>
+      <div class="grid g2">
+        <div class="card"><h3>Recent Activity</h3><div class="tbl"><table><thead><tr><th>Project</th><th>Uploaded by</th><th>Risk</th><th>Status</th></tr></thead><tbody><tr><td>Campaign A</td><td>Marketing</td><td><span class="tag med">Medium</span></td><td>Reviewing</td></tr><tr><td>Event Poster</td><td>HR</td><td><span class="tag low">Low</span></td><td>Approved</td></tr></tbody></table></div></div>
+        <div class="card"><h3>Recent Events</h3><ul><li>10:21 Upload image</li><li>10:23 AI scan complete</li><li>10:25 Reviewer approved</li></ul></div>
+      </div>
+      <button class="btn p action" data-msg="Create Project opened">+ Create Project</button>
+    </section>
+
+    <section id="s-create" class="screen">
+      <div class="grid g2">
+        <div class="card"><h3>Create New Project</h3><div><label>Project Name</label><input></div><div><label>Department</label><select><option>Marketing</option><option>HR</option><option>Legal</option></select></div><div><label>Description</label><textarea></textarea></div></div>
+        <div class="card"><h3>Upload Image</h3><div class="box">Drag and Drop Image Here<br>or Click to Upload</div><div class="btns" style="margin-top:8px"><button class="btn action" data-msg="Image uploaded (mock)">Upload</button><button class="btn p action" data-msg="AI Scan started">Start AI Scan</button></div></div>
+      </div>
+    </section>
+
+    <section id="s-detect" class="screen">
+      <div class="grid g2">
+        <div class="card"><h3>Uploaded Image Preview</h3><div class="box">Image Preview Area</div></div>
+        <div class="card"><h3>Detected Elements</h3><div><label style="text-transform:none"><input type="checkbox" checked class="chk"> Person 1</label><label style="text-transform:none"><input type="checkbox" checked class="chk"> Person 2</label><label style="text-transform:none"><input type="checkbox" class="chk"> Sensitive Object</label><div id="sel" class="muted">2 selected elements</div></div><h4>Action</h4><div class="btns"><button class="btn action" data-msg="Blur Face applied">Blur Face</button><button class="btn w action" data-msg="Pixelate applied">Pixelate</button><button class="btn d action" data-msg="Remove Person applied">Remove Person</button><button class="btn p action" data-msg="Protection applied">Apply Protection</button></div></div>
+      </div>
+    </section>
+
+    <section id="s-adjust" class="screen"><div class="grid g2"><div class="card"><h3>Image Canvas</h3><div class="box">Editable Image</div></div><div class="card"><h3>Tools</h3><div class="btns"><button class="btn action" data-msg="Blur tool selected">Blur Tool</button><button class="btn w action" data-msg="Pixel tool selected">Pixel Tool</button><button class="btn action" data-msg="Box selection selected">Box Selection</button></div><div style="margin-top:10px"><button class="btn p action" data-msg="Submitted for review">Submit For Review</button></div></div></div></section>
+
+    <section id="s-risk" class="screen"><div class="grid g2"><div class="card"><h3>Detected Sensitive Data</h3><ul><li>Human Face</li><li>Personal Identity</li><li>Location Metadata</li></ul></div><div class="card"><h3>Risk Level</h3><div class="risk" id="risk"><button class="sel" data-r="LOW">LOW<br><span class="muted">Auto Approve</span></button><button data-r="MEDIUM">MEDIUM<br><span class="muted">Reviewer Check</span></button><button data-r="HIGH">HIGH<br><span class="muted">Compliance Review</span></button></div><div id="rnote" class="muted" style="margin:8px 0">Selected: LOW - eligible for auto approval.</div><button class="btn p action" data-msg="Approval submitted">Submit Approval</button></div></div></section>
+
+    <section id="s-review" class="screen"><div class="grid g2"><div class="card"><h3>Compliance Review Panel</h3><p><b>Project:</b> Campaign A<br><b>Uploaded by:</b> Marketing Team<br><b>Risk:</b> <span class="tag med">MEDIUM</span></p><div class="box">Preview Image</div></div><div class="card"><h3>Reviewer Action</h3><div class="btns"><button class="btn g action" data-msg="Approved">Approve</button><button class="btn w action" data-msg="Edit requested">Request Edit</button><button class="btn d action" data-msg="Rejected">Reject</button></div></div></div></section>
+
+    <section id="s-audit" class="screen"><div class="grid g2"><div class="card"><h3>Export Options</h3><p><b>Project:</b> Campaign A<br><b>Status:</b> <span class="tag low">Approved</span></p><div class="btns"><button class="btn action" data-msg="Downloaded image">Download Image</button><button class="btn action" data-msg="API export triggered">API Export</button><button class="btn p action" data-msg="Published to platform">Publish to Platform</button></div></div><div class="card"><h3>Audit Log</h3><div class="tbl"><table><thead><tr><th>Time</th><th>Action</th><th>User</th></tr></thead><tbody><tr><td>10:21</td><td>Upload Image</td><td>Marketing Team</td></tr><tr><td>10:23</td><td>AI Scan</td><td>System</td></tr><tr><td>10:25</td><td>Approved</td><td>Reviewer</td></tr></tbody></table></div></div></div></section>
+
+    <section id="s-nav" class="screen"><div class="grid g2"><div class="card"><h3>Navigation Structure</h3><ul><li>Dashboard</li><li>Projects: Create Project, AI Detection, Review</li><li>Audit</li><li>Organization Settings</li><li>User Management</li></ul></div><div class="card"><h3>Future UI Expansion</h3><div class="future"><div>AI Heatmap Visualization</div><div>Batch Image Processing</div><div>Privacy Score Dashboard</div><div>Compliance Report Generator</div></div></div></div></section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const meta={login:["Login Page","Admin / User authentication with future SSO."],org:["Organization Setup","Create organization, assign roles, set policy mode."],dash:["Dashboard","Project status and recent review activity."],create:["Create Project","Upload content and start AI privacy scan."],detect:["AI Detection Page","Review detected elements and apply protections."],adjust:["Manual Adjustment","Refine masking before reviewer handoff."],risk:["Risk Classification","Route work by LOW / MEDIUM / HIGH risk."],review:["Reviewer Panel","Approve, request edit, or reject."],audit:["Export & Audit","Export outputs and inspect audit logs."],nav:["Navigation Structure","Information architecture and future features."]};
+const n=[...document.querySelectorAll('.nav button')],s=[...document.querySelectorAll('.screen')],t=document.getElementById('title'),st=document.getElementById('subtitle');
+function show(k){n.forEach(b=>b.classList.toggle('active',b.dataset.t===k));s.forEach(x=>x.classList.toggle('active',x.id===`s-${k}`));t.textContent=meta[k][0];st.textContent=meta[k][1];}
+n.forEach(b=>b.onclick=()=>show(b.dataset.t));
+const toast=document.getElementById('toast');let timer;function note(m){toast.textContent=m;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1500)}
+document.querySelectorAll('.action').forEach(b=>b.onclick=()=>note(b.dataset.msg||'Action complete'));
+const ch=[...document.querySelectorAll('.chk')],sel=document.getElementById('sel');function up(){sel.textContent=`${ch.filter(c=>c.checked).length} selected elements`}ch.forEach(c=>c.onchange=up);up();
+const rb=[...document.querySelectorAll('#risk button')],rn=document.getElementById('rnote');const rm={LOW:'Selected: LOW - eligible for auto approval.',MEDIUM:'Selected: MEDIUM - reviewer check required.',HIGH:'Selected: HIGH - compliance review required.'};rb.forEach(b=>b.onclick=()=>{rb.forEach(x=>x.classList.remove('sel'));b.classList.add('sel');rn.textContent=rm[b.dataset.r]});
+</script>
+</body>
+</html>
